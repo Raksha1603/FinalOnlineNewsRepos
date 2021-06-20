@@ -58,11 +58,17 @@
       <HintPath>packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -164,17 +170,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsCategoryController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataAccessLayer\NewsCategoryAccesslayer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interface\INewsCategoryRepository.cs" />
-    <Compile Include="Migrations\202106191124015_Table.cs" />
-    <Compile Include="Migrations\202106191124015_Table.designer.cs">
-      <DependentUpon>202106191124015_Table.cs</DependentUpon>
+    <Compile Include="Migrations\202106191342208_tablecreation.cs" />
+    <Compile Include="Migrations\202106191342208_tablecreation.Designer.cs">
+      <DependentUpon>202106191342208_tablecreation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertisement.cs" />
@@ -269,8 +273,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106191124015_Table.resx">
-      <DependentUpon>202106191124015_Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106191342208_tablecreation.resx">
+      <DependentUpon>202106191342208_tablecreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

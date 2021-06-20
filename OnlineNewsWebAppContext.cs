@@ -20,6 +20,10 @@ namespace OnlineNewsWebApp
             return new OnlineNewsWebAppContext();
         }
 
+        public virtual DbSet<International> International { get; set; }
+        public virtual DbSet<Feedback> Feedback { get; set; }
+        public virtual DbSet<Advertisement> Advertisement { get; set; }
+        public virtual DbSet<Subscribers> Subscribers { get; set; }
 
         public virtual DbSet<NewsCategory> NewsCategory { get; set; }
     }
