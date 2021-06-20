@@ -1,0 +1,23 @@
+<form novalidate #form="ngForm" autocomplete="off"> <!--to avoid default validation-->
+    <input type="hidden" name="CategoryID" [value]="service.formdata.CategoryID" />
+    <div class="form-group">
+        <label>CATEGORY NAME</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Category Name"
+         name="Name" #Name ="ngModel" [(ngModel)]="service.formdata.Name" 
+         required [class.invalid]="Name.invalid &#038;&#038; Name.touched">
+    </div>
+    <div class="form-group">
+        <label>CATEGORY DESCRIPTION</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Category Description"
+         name="Description" #Description ="ngModel" [(ngModel)]="service.formdata.Description" 
+         required [class.invalid]="Description.invalid &#038;&#038; Description.touched">
+    </div>
+    <div class="form-row">
+        <div class="col md-6">
+            <button (click)="insertRecord(form)"  class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid" >ADD</button>
+        </div>
+        <div class="col md-6">
+            <button (click)="updateRecord(form)"class="btn btn-info btn-lg btn-block" type="button"  [disabled]="form.invalid" >UPDATE</button>
+        </div>
+    </div>
+</form>
